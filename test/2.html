@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Test 2</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src='../index.js'></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    /** @jsx Rekt.createElement */
+    const element = (
+      <div>
+        <button onClick={() => alert('clicked!')} type="button">click me!</button>
+      </div>
+    )
+    const app = document.getElementById("app")
+    Rekt.render(element, app)
+  </script>
+</body>
+</html>
